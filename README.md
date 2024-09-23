@@ -9,11 +9,13 @@ Manage a client list by Search and detecting duplicates from a JSON list
 
 `--file FILE`: Specify the JSON file containing client data.
 
-`--search query`: Search value for clients. When no query key is passed, it searches for a math from the client's Full Name. 
+`--search query`: Search value for clients. When no query key is passed, it searches for a math from the client's Full Name. Can pass multiple seach queries to search for multiple clients.
 
 `--duplicates`: Check for duplicate email addresses in the dataset.
 
 `--query-key KEY`: Key to match the query value with. Defaults to `full_name`. Only works with search command
+
+Commands can be combined to perform multiple operations at once.
 
 ### Example
 ```shell
