@@ -58,5 +58,12 @@ RSpec.describe ClientManager do
       expect { subject.duplicates }.to output(/Jane Smith/).to_stdout
       expect { subject.duplicates }.to output(/Another Jane Smith/).to_stdout
     end
+
+    context 'when there are no duplicate emails' do
+      let(:json_file) { 'spec/fixtures/clients_no_duplicates.json' }
+      it 'does not find any clients' do
+        expect { subject.duplicates }.to output(/No duplicate emails found./).to_stdout
+      end
+    end
   end
 end
